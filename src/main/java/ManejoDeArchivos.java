@@ -5,7 +5,7 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class ManejoDeArchivos {
 
     public static void main(String[] args) {
         //Proceso de guardar y escribir en un archivo:
@@ -24,7 +24,7 @@ public class Main {
         FileOutputStream fileOutputStream;
 
         try {
-            fileOutputStream = new FileOutputStream("ManejoDeArchivos.txt");
+            fileOutputStream = new FileOutputStream("Contacts.txt");
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
             objectOutputStream.writeObject(contacts);
 
@@ -38,7 +38,7 @@ public class Main {
         FileInputStream fileInputStream;
 
         try{
-            fileInputStream = new FileInputStream("ManejoDeArchivos.txt");
+            fileInputStream = new FileInputStream("Contacts.txt");
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
 
             contacts2 = (List<Contact>) objectInputStream.readObject();
